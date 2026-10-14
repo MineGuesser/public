@@ -1,0 +1,52 @@
+name: Accessibility issue
+description: Something makes MineGuesser hard or impossible to play for you (colours, text, controls, motion, etc.).
+title: "[Accessibility]: "
+labels: ["accessibility"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We want everyone to be able to play. Tell us what gets in the way. You don't need to share anything personal, only what the barrier is.
+
+  - type: textarea
+    id: barrier
+    attributes:
+      label: What's the barrier?
+      placeholder: The country borders on the guess map are hard to tell apart from the land colours.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of barrier is it?
+      multiple: true
+      options:
+        - Colours / contrast
+        - Text size or readability
+        - Controls / mouse or keyboard
+        - Timing / time limits
+        - Motion / flashing / camera
+        - Sound
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: where
+    attributes:
+      label: Where in the game?
+      description: Command, menu, map, chat message, etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: What would help?
+      description: Optional. A setting, a different colour, an alternative control, anything.
+
+  - type: textarea
+    id: media
+    attributes:
+      label: Screenshots or video

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security issue or exploit
+    url: https://github.com/MineGuesser/public/security/advisories/new
+    about: Please report exploits and security problems privately here, not as a public issue.
+  - name: Play MineGuesser
+    url: https://mineguesser.net
+    about: Server info and how to join.

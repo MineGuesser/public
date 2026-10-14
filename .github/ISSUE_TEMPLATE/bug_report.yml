@@ -1,0 +1,106 @@
+name: Bug report
+description: Something in MineGuesser is broken or not working as expected.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve MineGuesser! Please search [existing issues](https://github.com/MineGuesser/public/issues?q=is%3Aissue) first; if your bug is already reported, add a 👍 to it instead of opening a new one.
+
+        **Found an exploit or security problem?** Please don't post it here. See the security link on the "New issue" page instead.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the problem. Include any error message you saw in chat.
+      placeholder: After submitting my guess, the results screen never appeared and I was stuck in the world.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+      placeholder: The round should end and show me the solution and my score.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: The more precise, the faster we can fix it.
+      placeholder: |
+        1. Run /mg
+        2. Place a marker on the map
+        3. Right-click the compass
+        4. ...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Game mode
+      description: Where did it happen?
+      options:
+        - Lobby / menus
+        - Solo round (/mg)
+        - Daily challenge (/daily)
+        - Party
+        - Tournament
+        - Guess map / controls
+        - Stats, leaderboards, achievements
+        - Friends / chat
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often does it happen?
+      options:
+        - Every time
+        - Sometimes
+        - Only once so far
+    validations:
+      required: true
+
+  - type: input
+    id: client-version
+    attributes:
+      label: Minecraft version
+      description: The version shown on your launcher or title screen, plus any client (Lunar, Fabric, etc.).
+      placeholder: "26.2, vanilla"
+    validations:
+      required: true
+
+  - type: input
+    id: when
+    attributes:
+      label: When did it happen?
+      description: Approximate date and time, with your time zone. This helps us find it in the server logs.
+      placeholder: "2026-10-14 around 20:30 CEST"
+
+  - type: input
+    id: username
+    attributes:
+      label: Minecraft username (optional)
+      description: Only if you're comfortable sharing it; it helps us look up your round.
+
+  - type: textarea
+    id: media
+    attributes:
+      label: Screenshots or video
+      description: Drag and drop images or clips here. Please don't post the location of today's daily challenge.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues and this hasn't been reported yet.
+          required: true

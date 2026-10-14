@@ -1,0 +1,56 @@
+name: Feature request
+description: Suggest a new feature or an improvement to an existing one.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Got an idea for MineGuesser? Please check [existing requests](https://github.com/MineGuesser/public/issues?q=is%3Aissue+label%3Aenhancement) first and 👍 the one you want instead of opening a duplicate. Votes help us decide what to build next.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Tell us what's missing or frustrating today. The "why" matters more than the exact solution.
+      placeholder: When I play with friends I can't see how we did on previous rounds once they scroll out of chat.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Your idea
+      description: How would you like it to work? Commands, menus, what you'd see in game.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part of the game?
+      options:
+        - Solo rounds
+        - Daily challenge
+        - Parties
+        - Tournaments
+        - Guess map / controls
+        - Scoring, hints, modifiers
+        - Stats, leaderboards, achievements, streaks
+        - Friends / chat
+        - Lobby / menus
+        - Something new
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or workarounds
+      description: Anything you do today instead, or other ways this could work.
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Mockups, screenshots, or examples from other games (GeoGuessr etc.) are welcome.
